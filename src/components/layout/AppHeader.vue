@@ -20,7 +20,7 @@
           :key="menu.id"
           @click="scrollTo(menu.id)"
           class="text-2xl font-semibold tracking-wide transition"
-          :class="scrolled ? 'text-black' : 'text-white'"
+          :class="scrolled ? 'text-primary' : 'text-white'"
         >
           {{ menu.name }}
         </button>
@@ -52,7 +52,7 @@ const scrollTo = (id: string) => {
 };
 
 const onScroll = () => {
-  scrolled.value = window.scrollY > 10;
+  scrolled.value = window.scrollY > 720;
 };
 
 onMounted(() => {
