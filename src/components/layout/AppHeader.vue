@@ -3,42 +3,26 @@
     class="fixed top-0 left-0 w-full z-50 transition-all duration-300"
     :class="scrolled ? 'bg-white shadow-md' : 'bg-transparent'"
   >
-    <div class="mx-auto max-w-7xl px-6 h-20 flex items-center justify-between">
-      <button
-        @click="scrollTo('top')"
-        class="text-lg font-bold"
-        :class="scrolled ? 'text-black' : 'text-white'"
-      >
-        eulbi
+    <div class="mx-auto max-w-7xl px-10 h-20 flex items-center justify-between">
+      <!-- 로고 -->
+      <button @click="scrollTo('top')" class="flex items-center">
+        <img
+          src="@/assets/home.png"
+          alt="home"
+          class="h-16 w-auto object-contain"
+        />
       </button>
 
-      <nav class="flex gap-10 text-lg font-semibold">
+      <!-- 메뉴 -->
+      <nav class="flex items-center gap-12">
         <button
-          @click="scrollTo('about')"
+          v-for="menu in menus"
+          :key="menu.id"
+          @click="scrollTo(menu.id)"
+          class="text-2xl font-semibold tracking-wide transition"
           :class="scrolled ? 'text-black' : 'text-white'"
         >
-          About
-        </button>
-
-        <button
-          @click="scrollTo('skills')"
-          :class="scrolled ? 'text-black' : 'text-white'"
-        >
-          Skills
-        </button>
-
-        <button
-          @click="scrollTo('projects')"
-          :class="scrolled ? 'text-black' : 'text-white'"
-        >
-          Projects
-        </button>
-
-        <button
-          @click="scrollTo('contact')"
-          :class="scrolled ? 'text-black' : 'text-white'"
-        >
-          Contact
+          {{ menu.name }}
         </button>
       </nav>
     </div>
@@ -46,29 +30,37 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { onBeforeUnmount, onMounted, ref } from "vue";
 
-const scrolled = ref(false)
+const scrolled = ref(false);
 
-function handleScroll() {
-  scrolled.value = window.scrollY > 720
-}
+const menus = [
+  { id: "about", name: "About" },
+  { id: "skills", name: "Skills" },
+  { id: "projects", name: "Projects" },
+  { id: "contact", name: "Contact" },
+];
 
-function scrollTo(id: string) {
-  const el = document.getElementById(id)
-  if (!el) return
+const headerHeight = 80; // h-20 = 80px
 
-  window.scrollTo({
-    top: el.offsetTop - 80,
-    behavior: 'smooth',
-  })
-}
+const scrollTo = (id: string) => {
+  const el = document.getElementById(id);
+  if (!el) return;
+
+  const y = el.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
+  window.scrollTo({ top: y, behavior: "smooth" });
+};
+
+const onScroll = () => {
+  scrolled.value = window.scrollY > 10;
+};
 
 onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-})
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+});
 
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", onScroll);
+});
 </script>
