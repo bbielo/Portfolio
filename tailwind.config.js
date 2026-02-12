@@ -8,7 +8,13 @@ export default {
           DEFAULT: "#C084FC",
           dark: "#A855F7"
         },
-        background: "#FAF7FF"
+        background: "#FAF7FF",
+        accent: {
+          green: "#10B981"
+        },
+        rotate: {
+          360: "360deg"
+        }
       }
     }
   },
