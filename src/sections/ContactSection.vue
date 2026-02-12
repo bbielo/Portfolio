@@ -2,7 +2,6 @@
   <section id="contact" class="scroll-mt-28 mt-16 bg-white">
     <div class="mx-auto max-w-7xl px-6">
       <div class="rounded-3xl border border-[#EAD7FB] bg-[#E5D9F1] p-8">
-        <p class="text-sm text-zinc-400">Get in touch</p>
         <h2 class="mt-2 text-2xl font-semibold text-zinc-900">Contact</h2>
 
         <div class="mt-6 grid gap-4 md:grid-cols-2">

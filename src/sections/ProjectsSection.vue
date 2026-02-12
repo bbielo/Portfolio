@@ -110,6 +110,14 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref } from "vue";
 
+const perView = ref(2);
+const start = ref(0);
+
+const maxStart = computed(() => Math.max(0, projects.length - perView.value));
+const canPrev = computed(() => start.value > 0);
+const canNext = computed(() => start.value < maxStart.value);
+const slideSizePercent = computed(() => 100 / perView.value);
+
 type Project = {
   title: string;
   desc: string;
@@ -146,27 +154,10 @@ const projects: Project[] = [
   },
 ];
 
-const perView = ref(2);
-const start = ref(0);
-
-const maxStart = computed(() => Math.max(0, projects.length - perView.value));
-const canPrev = computed(() => start.value > 0);
-const canNext = computed(() => start.value < maxStart.value);
-const slideSizePercent = computed(() => 100 / perView.value);
-
 const updatePerView = () => {
   perView.value = window.innerWidth < 768 ? 1 : 2;
   if (start.value > maxStart.value) start.value = maxStart.value;
 };
-
-onMounted(() => {
-  updatePerView();
-  window.addEventListener("resize", updatePerView);
-});
-
-onBeforeUnmount(() => {
-  window.removeEventListener("resize", updatePerView);
-});
 
 const prev = () => {
   start.value = Math.max(0, start.value - perView.value);
@@ -182,4 +173,13 @@ const pageIndex = computed(() => Math.floor(start.value / perView.value));
 const goToPage = (i: number) => {
   start.value = Math.min(maxStart.value, i * perView.value);
 };
+
+onMounted(() => {
+  updatePerView();
+  window.addEventListener("resize", updatePerView);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("resize", updatePerView);
+});
 </script>
