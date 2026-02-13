@@ -12,7 +12,8 @@
                 ref="topImgEl"
                 src="@/assets/aboutImg1.png"
                 alt="about1"
-                class="absolute right-10 top-6 h-[380px] w-[420px] object-cover shadow-md fly-base"
+                class="absolute right-10 top-6 h-[380px] w-[420px] object-cover 
+                shadow-[10px_10px_0px_#a4b8f1] fly-base"
                 :class="topImgClass"
               />
 
@@ -22,12 +23,12 @@
                 :class="topCardClass"
               >
                 <p class="leading-7 text-zinc-700">
-                  &nbsp;안녕하세요, 조을비입니다!<br />
+                  &nbsp;안녕하세요, <b>조을비</b>입니다!<br />
                   &nbsp;저는 야구 보는 걸 정말 좋아합니다. 시즌이 시작되면 자연스럽게 하루의 마무리가 야구가 되곤 합니다.<br />
                   야구는 혼자 잘해서 이길 수 있는 스포츠가 아니라 각자의 자리에서 묵묵히 자기 역할을 해낼 때 경기가 완성된다고 생각합니다.
-                  그 모습이 팀 개발과 참 닮았다고 느꼈습니다.<br />
+                  그 모습이 <b>팀 개발</b>과 참 닮았다고 느꼈습니다.<br />
                   &nbsp;홈런도 멋지지만 저는 보이지 않는 수비나 연결 플레이가 더 인상 깊습니다.
-                  저도 화려하지 않아도 팀 안에서 꼭 필요한 개발자가 되고 싶습니다.
+                  저도 화려하지 않아도 팀 안에서 꼭 <b>필요한 개발자</b>가 되고 싶습니다.
                 </p>
               </div>
             </div>
@@ -38,7 +39,8 @@
                 ref="bottomImgEl"
                 src="@/assets/aboutImg2.png"
                 alt="about2"
-                class="absolute left-10 top-6 h-[380px] w-[520px] object-cover shadow-md fly-base"
+                class="absolute left-10 top-6 h-[380px] w-[520px] object-cover
+                shadow-[-10px_10px_0px_#fae7b5] fly-base"
                 :class="bottomImgClass"
               />
 
@@ -48,11 +50,11 @@
                 :class="bottomCardClass"
               >
                 <p class="leading-7 text-zinc-700">
-                  &nbsp;저는 새로운 환경에 들어가면 먼저 흐름을 파악하는 편입니다.<br />
+                  &nbsp;저는 <b>새로운 환경</b>에 들어가면 먼저 <b>흐름</b>을 <b>파악</b>하는 편입니다.<br />
                   처음엔 낯설어도 팀이 어떤 방식으로 일하는지 관찰하고 빠르게 맞춰가요.
-                  같이 일할 때는 소통이 제일 중요하다고 생각합니다.<br />
+                  같이 일할 때는 <b>소통</b>이 제일 중요하다고 생각합니다.<br />
                   막히는 부분은 혼자 끙끙대기보다 공유하고 제가 아는 건 팀이 더 빨리 가도록 먼저 도와주려고 해요.<br />
-                  &nbsp;결국 개발은 혼자 잘하는 것보다 같이 잘 굴러가게 만드는 힘이 더 크게 작동한다고 믿습니다.
+                  &nbsp;결국 개발은 혼자 잘하는 것보다 <b>같이</b> 잘 굴러가게 만드는 힘이 더 크게 작동한다고 믿습니다.
                 </p>
               </div>
             </div>
