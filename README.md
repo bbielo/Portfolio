@@ -1,8 +1,11 @@
 <img width="1900" height="919" alt="image" src="https://github.com/user-attachments/assets/c2625662-4c3b-4b92-b3e0-ac018e69a49c" />
 > 안녕하세요. 개발자 조을비의 웹 포트폴리오입니다.<br />
 👉 https://eulbi-portfolio.netlify.app
-
-<br /><br /><br /><br />
+*메인이미지 제작은 AI를 활용하여 생성되었습니다.
+<br />
+<br />
+<br />
+<br />
 
 
 
