@@ -45,9 +45,9 @@ import tsImg from "@/assets/logoTs.png";
 import vueImg from "@/assets/logoVue.png";
 import javaImg from "@/assets/logoJava.png";
 import oracleImg from "@/assets/logoSql.png";
-import jiraImg from "@/assets/logoSharp.png";   // jira이모티콘
+import jiraImg from "@/assets/logoJira.png";
 import cSharpImg from "@/assets/logoSharp.png"; 
-import confluenceImg from "@/assets/logoConfluence.png";   // 컨플루언스 이모티콘
+import confluenceImg from "@/assets/logoConfluence.png";
 import gitHubImg from "@/assets/logoGithub.png"
 import { onMounted, onUnmounted, ref } from "vue";
 
