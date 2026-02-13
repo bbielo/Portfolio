@@ -3,7 +3,7 @@
     class="fixed top-0 left-0 w-full z-50 transition-all duration-300"
     :class="scrolled ? 'bg-white shadow-md' : 'bg-transparent'"
   >
-    <div class="mx-auto max-w-7xl px-10 h-20 flex items-center justify-between">
+    <div class="mx-auto max-w-7xl px-5 h-20 flex items-center justify-between">
       <!-- 로고 -->
       <button @click="scrollTo('top')" class="flex items-center">
         <img
