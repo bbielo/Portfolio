@@ -29,7 +29,7 @@
             </div>
 
             <div class="mt-4">
-              <h3 class="mt-2 text-3xl font-black tracking-tight text-zinc-900">
+              <h3 class="mt-2 text-2xl font-black tracking-tight text-zinc-900">
                 {{ project.title }}
               </h3>
               
@@ -88,7 +88,7 @@ const projects = [
     cardClass: "border-[#F9A8D4]"
   },
   {
-  title: "SuikaGame",
+  title: "Suika-Game",
   summary: "물리 엔진으로 구현한 웹 기반 수박게임",
   image: "/images/projects/SUIKA.png",
   link: "https://suika-game-mauve.vercel.app",
